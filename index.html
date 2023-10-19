@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baadal Barsa?</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="header">
+        <span class="material-symbols-outlined" id="logo">filter_drama</span>
+
+        <div class="header-right">
+          <div class="input-icons">
+          <form class="headform">
+            
+            <span class="material-symbols-outlined" class="input-icons">
+            location_on
+            </span>
+            <input class="input-field" type="text" id="fname" name="fname" placeholder="Enter City" ><br class="desktop">
+            <button class="favbutton" type="button" id="favorite">Favorite</button>
+          </form>
+          <div class="corf">
+            <br class="desktop">
+            <input type="checkbox" id="switch" class="toggle-checkbox"><label for="switch" class="toggle-label"><body>°C</body></label>
+            <span for="switch" id="clab">°C</span>
+            <span for="switch" id="flab">°F</span>
+            
+        </div>
+        </div>
+        </div>
+    </div> 
+    
+    
+
+    <div class="temp">
+        <h3 class="city">Currently</h3>
+        <h1>--°C</h1>
+        <figure >
+        <img src="cloudoff.svg" id="condicon" width="48px">
+        <figcaption id="condi">Condition</figcaption>
+        </figure>
+        <p>Feels like --°C</p>
+        <div class="othericons">
+            
+            <img src="humidity.svg" width="16" alt="maximum today" style="vertical-align:middle"><p class="max" id="humidity">--%</p><br>
+            <img src="max.svg" alt="maximum today" style="vertical-align:middle"><p class="max" id="maximum">--°C  &nbsp;/</p>
+            <p class="min" id="minimum">--°C  </p><img src="min.svg" alt="precipitation" style="vertical-align:middle"><br>
+        <img src="wind.svg" alt="wind speed" style="vertical-align:middle"><p class="windsp" id="windspeed">--km/h &nbsp; </p>
+        <img src="drop.svg" alt="precipitation" style="vertical-align:middle" ><p class="rainmm" id="rainfall">--mm </p>
+
+    </div>
+    </div>
+
+    <div class="days" id="Tomorrow" >
+        <h3 class="date">Tomorrow</h3>
+        <img src="max.svg" width="32px" >
+        <h2 class="foremaxmin">--°C | --°C</h2>
+        <img src="min.svg" width="32px">
+        <figure>
+            <img src="cloudoff.svg" class="forecondicon" width="48px">
+            <figcaption class="forecondi">Condition</figcaption>
+            </figure>
+            <img src="humidity.svg" width="16" alt="maximum today" ><p class="max">--%</p><br>
+            <img src="wind.svg" alt="wind speed" ><p class="windsp">--km/h &nbsp; </p>
+            <img src="drop.svg" alt="precipitation"><p class="rainmm">--mm </p>
+    </div>
+    <div class="days" id="daTomorrow">
+        <h3 class="date">Day After Tomorrow</h3>
+        <img src="max.svg" width="32px" >
+        <h2 class="foremaxmin">--°C | --°C</h2>
+        <img src="min.svg" width="32px">
+        <figure>
+            <img src="cloudoff.svg" class="forecondicon" width="48px">
+            <figcaption class="forecondi">Condition</figcaption>
+            </figure>
+            <img src="humidity.svg" width="16" alt="maximum today" ><p class="max">--%</p><br>
+            <img src="wind.svg" alt="wind speed" ><p class="windsp">--km/h &nbsp; </p>
+            <img src="drop.svg" alt="precipitation"><p class="rainmm">--mm </p>
+    </div>
+    <div class="days" id="da3">
+        <h3 class="date">Day After Day After</h3>
+        <img src="max.svg" width="32px" >
+        <h2 class="foremaxmin">--°C | --°C</h2>
+        <img src="min.svg" width="32px">
+        <figure>
+            <img src="cloudoff.svg" class="forecondicon" width="48px">
+            <figcaption class="forecondi">Condition</figcaption>
+            </figure>
+            <img src="humidity.svg" width="16" alt="maximum today" ><p class="max">--%</p><br>
+            <img src="wind.svg" alt="wind speed" ><p class="windsp">--km/h &nbsp; </p>
+            <img src="drop.svg" alt="precipitation"><p class="rainmm">--mm </p>
+    </div>
+    <div class="favpar">
+    <span><div class="favbar"><a class="favanc" id="city1"></a></div></span><br>
+    <span><div class="favbar"><a class="favanc" id="city2"></a></div></span>
+    <span><div class="favbar"><a class="favanc" id="city3"></a></div></span>
+    <span><div class="favbar"><a class="favanc" id="city4"></a></div></span>
+    <span><div class="favbar"><a class="favanc" id="city5"></a></div></span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

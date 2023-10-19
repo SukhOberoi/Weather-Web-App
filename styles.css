@@ -1,0 +1,362 @@
+/* Style the header with a grey background and some padding */
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+body {
+  font-family: 'Lato', sans-serif;
+}
+.header {
+  
+  justify-content: left;
+  overflow: hidden;
+  padding: 20px 20px;
+  background-color: rgb(243, 243, 243);
+  border-radius: 6px;
+  border-bottom: 5px solid hsl(241, 3%, 73%);
+  border-right: 5px solid hsl(241, 3%, 73%);
+    border-top: 0px;
+    vertical-align: middle;
+}
+#baadal{
+  font-size: 58px;
+  vertical-align: middle;
+}
+#favorite{
+  display: inline;
+}
+.header-right {
+  float: right;
+  justify-content: right;
+  width: 348px;
+}
+.desktop{
+  display: none;
+}
+.mobilehead{
+  display: none;
+}
+#logo {
+  font-size:65px;
+  margin-top: 3px;
+}
+.favbutton {
+  background-color: #24a0ed; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #0e3b57;
+  margin-left: 5px;
+}
+.corf p{
+  display: inline;
+}
+h2{
+  display: inline;
+  margin: 10px;
+}
+input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  float: right;
+  display: inline;
+}
+
+.corf label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 60px;
+  height: 39px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  float: right;
+  margin-top: 19px;
+}
+
+.corf label:after {
+  content: '°F';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+.corf input:checked + label {
+  background: #24a0ed;
+}
+
+.corf input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.corf label:active:after {
+  width: 50px;
+}
+
+#clab{
+  position: absolute;
+  right: 102px;
+  top: 30px;
+  
+}
+#flab{
+  position: absolute;
+  margin-left: 85px;
+  top: 30px;
+}
+/* Style the header links 
+.header a {
+	background-color: white;
+    padding: 12px 24px;
+    color: black;
+    border-radius: 6px;
+    border-bottom: 4px solid hsl(241, 3%, 73%);
+    border-top: 0px;
+    transition: all 0.1s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+}
+
+*/
+
+/* Change the background color on mouse-over 
+.header a:hover {    
+	border-bottom-width: 0;
+    border-top-width: 4px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+*/
+/* Style the active/current link
+.header a.active {
+  text-decoration: underline;
+}
+*/
+/* Float the link section to the right */
+
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+
+
+
+.input-icons span {
+  position: absolute;
+  margin-top: 26px;
+  margin-left: 8px;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+  display: inline;
+}
+
+
+
+.input-field {
+  width: 150px;
+  height: 46px;
+  padding: 10px;
+  margin-top: 15px;
+  text-align: center;
+  display: inline;
+  border-radius: 6px;
+  border:0px;
+} 
+.input-field:hover{
+
+}
+
+.headform{
+  display: inline;
+  float: left;
+}
+
+
+
+.temp{
+  text-align: center;
+  width: 100%;
+  height: 35%;
+  margin-bottom: 10px;
+
+}
+.temp h3{
+  margin-bottom: 0px;
+}
+.temp h1{
+  margin-bottom: -17px;
+  margin-top: 5px;
+
+}
+.days{
+  text-align: center;
+  width: 33%;
+  height: 40%;
+  margin-top: 10px;
+
+  
+}
+.days img{
+  vertical-align: middle;
+}
+.days h2{
+  vertical-align: middle;
+  text-align: center;
+}
+.days p{
+  display: inline;
+  vertical-align: middle;
+}
+.othericons p{
+  display: inline;
+}
+#Tomorrow{
+  float: left;
+}
+#daTomorrow{
+  float: left;
+}
+#da3{
+  float: right;
+}
+
+
+.favanc {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+
+.favanc::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 1;
+	top: 110%;
+	left: 0;
+	background-color: black;
+	transform-origin: bottom right;
+	transition: transform .4s cubic-bezier(.86,0,.07,1);
+  }
+
+.favanc:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+  }
+
+.favbar{
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  margin: 0px 50px;
+}
+.favpar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: right;
+  }
+  .header span{
+    text-align: center;
+  }
+  #Tomorrow{
+    display: inline;
+    float: right;
+  }
+  #daTomorrow{
+    display: inline;
+    float: right;
+  }
+  #da3{
+    display: inline;
+    float: right;
+  }
+  .days{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  /* .favbar{
+    display: inline;
+    margin: auto; 
+    width: 90%;
+    align-items: center;
+  }
+  .favpar{
+    display: inline;
+    width: 100%;
+    align-items: center;
+  } */
+
+
+}
+@media screen and (max-width: 490px){
+  .header-right{
+    display: block;
+    width: 95%;
+  }
+  .input-field {
+    width: 90%;
+  }
+  .desktop{
+    display: block;
+  }
+  /* .mobilehead{
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+  
+  } */
+  .header{
+    text-align: center;
+  }
+  #clab{
+    position: absolute;
+    right: 102px;
+    top: 117px;
+    
+  }
+  #flab{
+    position: absolute;
+    top: 117px;
+    right: 18px;
+  }
+
+}
+@media screen and (max-height: 650px){
+  .temp{
+    height: 270px;
+  }
+  .days{
+    height: 270px;
+  }
+}
+
+
+
