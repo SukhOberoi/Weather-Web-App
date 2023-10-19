@@ -89,6 +89,8 @@ function fetchWeather(cityName) {
             const conditionIconUrl=currentWeather.condition.icon;
             const conditionIcon = document.getElementById('condicon');
             conditionIcon.src = conditionIconUrl;
+            document.body.style.backgroundImage = "url('overcast.png')";
+
             const switchCheckbox = document.getElementById('switch');
             if (switchCheckbox.checked) {
                 const tempFahrenheit = `${currentWeather.temp_f}°F`;
