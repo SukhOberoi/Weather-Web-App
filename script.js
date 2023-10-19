@@ -89,7 +89,83 @@ function fetchWeather(cityName) {
             const conditionIconUrl=currentWeather.condition.icon;
             const conditionIcon = document.getElementById('condicon');
             conditionIcon.src = conditionIconUrl;
-            document.body.style.backgroundImage = "url('overcast.png')";
+            const conditionCode = currentWeather.condition.code;
+            const isday = currentWeather.is_day;
+            document.querySelector('main').style.color='black';
+            let dark = false;
+            switch(conditionCode){
+                case 1000:
+                case 1030:
+                    if(isday==1){
+                        document.body.style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('sunny.jpg')";
+                    }
+                    else{
+                        document.body.style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('clearmoon.jpg')";
+                        
+                    }
+                    break;
+                case 1003:
+                    if(isday==1){
+                        document.body.style.backgroundImage = "url('partlycloudy.jpg')";
+                    }
+                    else{
+                        document.body.style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('partlycloudynight.jpg')";
+                        dark= true
+                    }
+                    break;
+                case 1006:
+                case 1009:
+                    document.body.style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('overcast.jpg')";
+                    break;
+                
+                case 1135:
+                case 1147:
+                    document.body.style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('mistfog.jpg')";
+                    break;
+                case 1063:
+                case 1072:
+                case 1150:
+                    document.body.style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('rain2.jpg')";
+                    break;
+                case 1153:
+                case 1168:
+                case 1171:
+                case 1180:
+                case 1183:
+                    document.body.style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('rain3.jpg')";
+                    break;
+                case 1189:
+                case 1192:
+                case 1195:
+                case 1198:
+                case 1201:
+                case 1204:
+                case 1207:
+                case 1240:
+                case 1243:
+                case 1246:
+                case 1249:
+                case 1252:
+                case 1261:
+                case 1273:
+                case 1276:
+                    document.body.style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('thunderstorm.jpg')";
+                    break;
+                case 1213:
+                case 1216:
+                case 1219:
+                case 1222:
+                case 1225:
+                case 1237:
+                case 1264:
+                case 1279:
+                case 1282:
+                    document.body.style.backgroundImage = "url('snow.jpg')";
+            }
+            
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundPosition = "center"; 
+            document.body.style.backgroundSize = "cover"; 
 
             const switchCheckbox = document.getElementById('switch');
             if (switchCheckbox.checked) {
