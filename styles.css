@@ -174,9 +174,9 @@ input[type=checkbox]{
   border-radius: 6px;
   border:0px;
 } 
-.input-field:hover{
+/* .input-field:hover{
 
-}
+} */
 
 .headform{
   display: inline;
@@ -299,6 +299,19 @@ input[type=checkbox]{
     margin: auto;
     text-align: center;
   }
+  .favpar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.favbar {
+    text-align: center;
+    margin: 10px;
+    width: 150px; /* Adjust the width as needed */
+}
 
   /* .favbar{
     display: inline;
